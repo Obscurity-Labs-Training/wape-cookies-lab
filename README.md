@@ -32,8 +32,6 @@ Enjoy the lab!
 
 ## Lab 1: Getting and Inspecting a Cookie
 
-Got it! Below are the **lab instructions** that guide students through setting and retrieving cookies using your existing Flask app, and inspecting the headers in browser Developer Tools.
-
 ---
 
 ### **Lab: Demonstrating Get and Set Cookies**
