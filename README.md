@@ -32,6 +32,96 @@ Enjoy the lab!
 
 ## Lab 1: Getting and Inspecting a Cookie
 
+Got it! Below are the **lab instructions** that guide students through setting and retrieving cookies using your existing Flask app, and inspecting the headers in browser Developer Tools.
+
+---
+
+### **Lab: Demonstrating Get and Set Cookies**
+
+#### **Objective**:
+In this lab, you will:
+1. Set a cookie using a Flask route.
+2. Retrieve the cookie in a subsequent request.
+3. Inspect the HTTP request and response headers using the browser's Developer Tools.
+
+---
+
+### **Step 1: Start the Application**
+
+1. Make sure your Flask app is running via Docker:
+   ```bash
+   docker-compose up
+   ```
+
+2. The application will be accessible at `http://localhost:5000`.
+
+---
+
+### **Step 2: Set a Cookie**
+
+1. **Open your browser** and navigate to the following route to set a cookie:
+   ```
+   http://localhost:5000/set_cookie
+   ```
+
+2. You should see the message:
+   ```
+   Cookie has been set!
+   ```
+
+3. **Open Developer Tools**:
+   - In Chrome, press `Ctrl + Shift + I` (or `Cmd + Option + I` on macOS).
+   - Go to the **Network** tab.
+
+4. **Inspect the Headers**:
+   - Refresh the page to capture the request.
+   - Click on the `set_cookie` request and inspect the **Response Headers**.
+   - In the **Response Headers**, you should see a `Set-Cookie` header like this:
+     ```
+     Set-Cookie: username=JohnDoe
+     ```
+   - This indicates that the server has set the `username` cookie with the value `JohnDoe`.
+
+---
+
+### **Step 3: Get the Cookie**
+
+1. Now, navigate to the following route to retrieve the cookie:
+   ```
+   http://localhost:5000/get_cookie
+   ```
+
+2. You should see a message like:
+   ```
+   Cookie found! Username: JohnDoe
+   ```
+
+3. **Inspect the Headers**:
+   - Go back to the **Network** tab in Developer Tools.
+   - Refresh the page.
+   - Click on the `get_cookie` request.
+   - In the **Request Headers**, you should see a `Cookie` header like this:
+     ```
+     Cookie: username=JohnDoe
+     ```
+   - This shows that the browser automatically sent the cookie back to the server as part of the HTTP request.
+
+---
+
+### **Step 4: Review the Cookie in the Browser**
+
+1. In the Developer Tools, go to the **Application** tab (in Chrome) or **Storage** tab (in Firefox).
+   - On the left-hand side, under **Cookies**, select the `localhost` domain.
+   
+2. Here, you can see the cookie that was set, along with its name (`username`) and value (`JohnDoe`).
+
+---
+
+### **Lab Summary**:
+- You’ve learned how a server sets cookies in the browser using the `Set-Cookie` header.
+- You’ve seen how the browser automatically includes cookies in subsequent requests via the `Cookie` header.
+- You used the browser’s Developer Tools to inspect request/response headers and manage cookies.
+
 
 ## Lab 2: Getting and Inspecting a Secure Cookie!
 
