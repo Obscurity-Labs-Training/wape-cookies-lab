@@ -23,6 +23,7 @@ This project demonstrates how to set and retrieve a basic cookie using Flask, wi
 4. **Test the Application**:
    - Go to `http://localhost:5000/set_cookie` to set a cookie.
    - Go to `http://localhost:5000/get_cookie` to retrieve the cookie.
+   - - Go to `http://localhost:5000/get_secure_cookie` to retrieve the cookie.
 
 5. **Stop the Application**:
    - Run `docker-compose down` to stop the container.
