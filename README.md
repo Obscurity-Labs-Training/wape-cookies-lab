@@ -12,12 +12,12 @@ This project demonstrates how to set and retrieve a basic cookie using Flask, wi
 
 2. **Build the Docker image**:
    ```bash
-   docker-compose build
+   docker compose build
    ```
 
 3. **Run the Docker container**:
    ```bash
-   docker-compose up
+   docker compose up
    ```
 
 4. **Test the Application**:
@@ -26,7 +26,7 @@ This project demonstrates how to set and retrieve a basic cookie using Flask, wi
    - Go to `http://localhost:5000/get_secure_cookie` to retrieve the cookie.
 
 5. **Stop the Application**:
-   - Run `docker-compose down` to stop the container.
+   - Run `docker compose down` to stop the container.
 
 Enjoy the lab!
 
@@ -48,7 +48,7 @@ In this lab, you will:
 
 1. Make sure your Flask app is running via Docker:
    ```bash
-   docker-compose up
+   docker compose up
    ```
 
 2. The application will be accessible at `http://localhost:5000`.
